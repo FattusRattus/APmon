@@ -6,6 +6,7 @@ import csv
 import os
 import datetime
 import optparse
+import requests
 
 from scapy.all import *
 
@@ -17,9 +18,13 @@ def probesniff(fm):
       client_name = fm.info
       if client_name == ap_name :
          if fm.addr2 not in probe_req:
+            # Get MAC Vendor
+            vendor = requests.get('http://api.macvendors.com/' + fm.addr2).text
+            if "Not Found" in vendor:
+               vendor = "Unknown"
             print "New Probe Request: ", client_name
             print "Time: ", datetime.now().strftime('%H:%M')
-            print "MAC ", fm.addr2
+            print "MAC ", fm.addr2 + " (" + vendor + ")"
             probe_req.append(fm.addr2)
 
             # Below is hard coded line to play WAV on new client

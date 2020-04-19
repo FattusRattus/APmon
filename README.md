@@ -9,10 +9,16 @@ Added command line features and CSV database for printing out known wifi clients
 
 Also, I have added ‘store=0’ to the Scapy sniffing routine, which almost every script I have seen misses out (including this one)! Without this (or some clean up) these scripts will soon grind your system to a halt – it happens very quickly on a Raspberry Pi3.
 
+Converted to Python 3 - 19 April 2020
+
 Usage
 ----
 Scan for wifi APs: ./apmon.py -i wlan0
 Monitor wifi AP: ./apmon.py -i wlan0mon -d sample.csv -e WifiAP
+
+Python3 version:
+Scan for wifi APs: ./apmon3.py -i wlan0
+Monitor wifi AP: ./apmon3.py -i wlan0mon -d sample.csv -e WifiAP
 
 Requirements
 ----

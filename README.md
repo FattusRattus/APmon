@@ -13,12 +13,13 @@ Converted to Python 3 - 19 April 2020
 
 Usage
 ----
-Scan for wifi APs: ./apmon.py -i wlan0
-Monitor wifi AP: ./apmon.py -i wlan0mon -d sample.csv -e WifiAP
+Scan for wifi APs: ./apmon.py -i wlan0<br/>
+Monitor wifi AP: ./apmon.py -i wlan0mon -d sample.csv -e WifiAP<br/>
 
-Python3 version:
-Scan for wifi APs: ./apmon3.py -i wlan0
-Monitor wifi AP: ./apmon3.py -i wlan0mon -d sample.csv -e WifiAP
+
+Python3 version: <br/>
+Scan for wifi APs: ./apmon3.py -i wlan0<br/>
+Monitor wifi AP: ./apmon3.py -i wlan0mon -d sample.csv -e WifiAP<br/>
 
 Requirements
 ----
